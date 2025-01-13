@@ -1,9 +1,20 @@
 import React from 'react'
-
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 function App() {
+  useGSAP(()=>{
+    gsap.to("#div1",{
+      x:250,
+      duration:3,
+      ease:"back.inOut",
+      rotate:360
+    })
+  })
   return (
     <>
-      <h1>hello</h1>
+      <div className='w-20 h-20 bg-blue-400 m-5 radius-lg' id="div1"> 
+
+      </div>
     </>
   )
 }
